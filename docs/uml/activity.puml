@@ -1,0 +1,24 @@
+@startuml
+start
+
+:User enters login;
+:Send login request;
+
+if (Valid?) then (yes)
+  :Save cookie;
+  :Go to color page;
+else (no)
+  :Show error;
+  stop
+endif
+
+:User enters color;
+:Send AddColor request;
+:Store in DB;
+
+:User searches color;
+:Send SearchColors request;
+:Display results;
+
+stop
+@enduml
