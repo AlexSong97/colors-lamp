@@ -1,0 +1,49 @@
+@startuml
+
+class User {
+  userId
+  firstName
+  lastName
+}
+
+class Color {
+  name
+  userId
+}
+
+class FrontendJS {
+  +doLogin()
+  +addColor()
+  +searchColor()
+  +doLogout()
+}
+
+class LoginAPI {
+  +doLogin(login, password)
+}
+
+class AddColorAPI {
+  +addColor(color, userId)
+}
+
+class SearchColorsAPI {
+  +searchColors(search, userId)
+}
+
+class Database {
+  +insertColor()
+  +queryColors()
+}
+
+FrontendJS --> User
+FrontendJS --> LoginAPI
+FrontendJS --> AddColorAPI
+FrontendJS --> SearchColorsAPI
+
+User --> Color : owns
+
+AddColorAPI --> Database
+SearchColorsAPI --> Database
+Database --> Color
+
+@enduml
