@@ -1,0 +1,13 @@
+@startuml
+actor User
+
+User --> (Login)
+User --> (Add Color)
+User --> (Search Color)
+User --> (Logout)
+
+(Login) ..> (Validate User) : <<include>>
+(Add Color) ..> (Store Color in DB) : <<include>>
+(Search Color) ..> (Retrieve Colors) : <<include>>
+
+@enduml
