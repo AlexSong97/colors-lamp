@@ -1,0 +1,18 @@
+{
+  "name": "colors-app",
+  "version": "1.0.0",
+  "description": "Colors web application with CI linting",
+  "scripts": {
+    "lint:html": "htmlhint public/*.html",
+    "lint:css": "stylelint \"public/css/**/*.css\"",
+    "lint:js": "eslint public/js/*.js",
+    "lint": "npm run lint:html && npm run lint:css && npm run lint:js"
+  },
+  "devDependencies": {
+    "eslint": "^9.10.0",
+    "htmlhint": "^1.1.4",
+    "stylelint": "^16.8.2",
+    "stylelint-config-standard": "^36.0.1",
+    "@eslint/js": "^9.10.0"
+  }
+}
