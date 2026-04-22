@@ -1,0 +1,20 @@
+{
+  "name": "colors-lamp",
+  "version": "1.0.0",
+  "description": "COLORS LAMP Web Application with Jest Testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --env=jsdom"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AlexSong97/colors-lamp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "jest": "^30.3.0",
+    "jest-environment-jsdom": "^30.3.0"
+  }
+}
